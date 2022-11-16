@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-import About from './pages/About';
-import { Route, Routes, Link } from 'react-router-dom';
+
 
 function App() {
   const [itemText, setItemText] = useState('');
@@ -89,24 +88,7 @@ function App() {
   );
 
   return (
-    <div className='App'>
-      <div className='header'>
-        <nav className='nav'>
-          <ul>
-            <li>
-              <Link to='/about'>About</Link>
-            </li>
-            <li>
-              <Link to='/'>Todo-App</Link>
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </div>
-
-      
+    <div className='App'>            
       <form className='form' onSubmit={(e) => addItem(e)}>
         <input
           type='text'
